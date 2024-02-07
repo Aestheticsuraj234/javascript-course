@@ -1,42 +1,48 @@
-console.log("Hello world into the other file")
+// Output "Hello world into the other file"
+console.log("Hello world into the other file");
 
-// variables!
+// Variables
 
-// *var, let, const
+// Declaration and assignment using var, let, and const
+var name = "John Doe"; // var
+let age = 30; // let
+console.log(age);
+const hasHobbies = true; // const (constant)
 
-var name = "John Doe";
-let age = 30
-console.log(age)
-const hasHobbies = true;
+// Primitive Types
 
-
-// 1. primitive types
-
-// *number, string, boolean, null, undefined, symbol
-
+// Number
 let myAge = 20;
-let myName = "SURAJ";//--1
-let myName2 = 'SURAJ';//--2
-let myName3 = `SURAJ`; //--3
-let isExist = false , isExist2 = true;
+
+// String
+let myName = "SURAJ"; // Using double quotes
+let myName2 = 'SURAJ'; // Using single quotes
+let myName3 = `SURAJ`; // Using backticks for template literals
+
+// Boolean
+let isExist = false;
+let isExist2 = true;
+
+// Null
 let myNull = null;
+
+// Undefined
 let myUndefined = undefined;
 
+// Complex Types
 
-// COMPLEX TYPES
-
-// *object, array, function
-
+// Object
 let myObject = {
     name: "John",
     age: 30
 };
 
+// Array
 let myArray = [1, 2, 3, 4, 5];
 
+// Functions
 
-// FUNCTIONS
-
+// Function declaration
 function sum() {
     console.log(1 + 1);
 }
