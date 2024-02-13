@@ -1,4 +1,3 @@
-Sure, let's break down each section and provide code examples:
 
 ### Introduction to JavaScript
 
