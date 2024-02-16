@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-full h-full bg-zinc-900 text-white flex flex-col justify-center items-center">
+
+    <nav class="w-full bg-zinc-800 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold mr-4">Number Guessing Game..</h1>
+            </div>
+            <div class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-white font-semibold hover:text-gray-300">Home</a></li>
+                    <li><a href="#" class="text-white font-semibold hover:text-gray-300">About</a></li>
+                    <li><a href="#" class="text-white font-semibold hover:text-gray-300">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-4xl font-bold mt-4">Welcome! How are you👋</h1>
+
+    <main class="flex justify-around items-center w-full gap-x-4 mt-10 mx-4 mb-10">
+        <figure class="w-1/2  mt-10 mx-10">
+            <img src="assets/undraw_online_test_re_kyfx.svg" alt="Nature" height="400" width="400">
+        </figure>
+        <form id="guessForm" class="flex flex-col justify-center items-center gap-y-4 mt-10 bg-white h-[420px] w-[420px] px-5 rounded-lg shadow-md">
+            <label for="guess" class="text-2xl font-bold text-zinc-600 mb-10">Enter a number between 1 and 100</label>
+            <input type="number" id="guess" name="guess" class="w-full p-2  border text-black text-center bg-white rounded-md" placeholder="Enter a number" required>
+            <button type="submit" class="w-full p-2 bg-[#092635] rounded-md hover:bg-zinc-600">Submit</button>
+            <p id="message" class="mt-5 text-sm text-zinc-600 font-bold">Message:</p>
+        </form>
+    </main>
+
+    <script>
+        // Generate a random number between 1 and 100
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log(randomNumber);
+
+        // Get the form element
+        const guessForm = document.getElementById('guessForm');
+        const message = document.getElementById('message');
+
+        // Add event listener to the form
+        guessForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the user's guess
+            const userGuess = parseInt(document.getElementById('guess').value);
+
+            // Compare the user's guess with the random number
+            if (userGuess === randomNumber) {
+                // If the guess matches the random number, display a congratulatory message
+                message.classList.add('text-green-500');
+                message.textContent = 'Congratulations! You win!';
+            } else {
+                // If the guess does not match the random number, display a message indicating the correct number
+                message.classList.add('text-red-500');
+                message.textContent = `Sorry, you lose! The correct number was ${randomNumber}.`;
+            }
+guessForm.reset();
+        });
+    </script>
+
+</body>
+
+</html>
