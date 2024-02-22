@@ -1,0 +1,23 @@
+.body{
+    background-color: #000;
+    color: #fff;
+}
+
+.btn{
+    padding: 4px 8px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+
+}
+
+.light{
+    background-color: #fff;
+    color: #000;
+}
+
+.dark{
+    background-color: #000;
+    color: #fff;
+}
