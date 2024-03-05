@@ -4,7 +4,8 @@ console.log("I am a sync code")
 setTimeout(()=>{
     console.log("I am a async code")
 } , 5000)
-console.log("I am a sync code3")
+c
+
 
 // setInterval
 // setTimeout
