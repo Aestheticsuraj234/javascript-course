@@ -83,32 +83,31 @@
 // })
 
 
-fetch("https://api.github.com/users/Aestheticsuraj234").then((value) => {
-    return value.json()
-}).then((data) => {
-    console.log(data)
+// fetch("https://api.github.com/users/Aestheticsuraj234").then((value) => {
+//     return value.json()
+// }).then((data) => {
+//     console.log(data)
 
-}).catch((err) => {
-    console.error(err)
-}).finally(() => {
-    console.log("Finally block")
-})
+// }).catch((err) => {
+//     console.error(err)
+// }).finally(() => {
+//     console.log("Finally block")
+// })
 
-// async function GetData(){
-//     try {
-//         const response = await fetch("https://api.github.com/users/Aestheticsurajsmddso");
-//         const data = await response.json();
-//         console.log(data)
+async function GetData(){
+    try {
+        const response = await fetch("https://api.github.com/users/Aestheticsuraj234");
+        const data = await response.json();
+        console.log(data)
         
-//     } catch (error) {
-//         console.error(error)
-//     }
+    } catch (error) {
+        console.error(error)
+    }
 
-//     finally{
-//         console.log("Finally block")
-//     }
+    finally{
+        console.log("Finally block")
+    }
 
+}
 
-// }
-
-// GetData()
+GetData()
